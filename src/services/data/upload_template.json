@@ -1,0 +1,359 @@
+{
+    "changeModeCode": true,
+    "problem": {
+        "id": 1547,
+        "problemId": "1547",
+        "title": "同学讲礼貌",
+        "author": "zhangjian5",
+        "type": 1,
+        "publishStatus": 1,
+        "judgeMode": "default",
+        "judgeCaseMode": "default",
+        "timeLimit": 1000,
+        "memoryLimit": 128,
+        "stackLimit": 128,
+        "description": "*学校的学生非常遵守学校的规章制度。小朋友们课间喝水，都去排队打水，但是条件很有限，只有一台饮水机。为了珍惜有限的课余时间，老师想到了一个办法，让同学们的平均等待时间最少。现在有 n 个小朋友在一个饮水机前排队接水，假如每个人接水的时间为 T~i~，请你编程帮老师找出这 n 个小朋友排队的一种顺序，使得 n 个人的平均等待时间最小。(需要考虑自己打水的时间)",
+        "input": "输入文件共两行，第一行为 n，1≤n≤1000\n第二行分别表示第 1 个同学到第 n 个同学每人的接水时间 T~1~，T~2~，…，T~n~，每个数据之间有 1 个空格，0<T~i~≤1000。",
+        "output": "输出文件有一行，为老师得到的某种排列方案下的最小平均等待时间(输出结果精确到小数点后两位)。",
+        "examples": "<input>10                                    \n56 12 1 99 1000 234 33 55 99 812</input><output>532.00</output>",
+        "isRemote": false,
+        "source": "",
+        "difficulty": 3,
+        "difficultyRadix": 1,
+        "hint": "数据范围与提示：\n1≤n≤1000，0<T~i~≤1000。",
+        "auth": 1,
+        "ioScore": 100,
+        "codeShare": false,
+        "spjCode": null,
+        "spjLanguage": null,
+        "userExtraFile": null,
+        "judgeExtraFile": null,
+        "isRemoveEndBlank": true,
+        "openCaseResult": true,
+        "isUploadCase": true,
+        "caseVersion": "1761627576059",
+        "modifiedUser": "15014490101",
+        "isGroup": false,
+        "gid": null,
+        "applyPublicProgress": null,
+        "isFileIO": false,
+        "ioReadFileName": null,
+        "ioWriteFileName": null,
+        "gmtCreate": "2022-11-09T06:28:17.000+0000",
+        "gmtModified": "2025-10-28T04:59:36.000+0000",
+        "isDeleted": 0,
+        "questionBankId": null,
+        "questionChapterId": null,
+        "realname": null,
+        "spjCompileOk": false,
+        "uploadTestcaseDir": "/opt/judge/file/zip/be211d9eabac476abf6859163611527e",
+        "testCaseScore": [
+            {
+                "output": "0.out",
+                "input": "0.in",
+                "score": 10,
+                "pid": 1547,
+                "index": 1,
+                "_XID": "row_207"
+            },
+            {
+                "output": "1.out",
+                "input": "1.in",
+                "score": 10,
+                "pid": 1547,
+                "index": 2,
+                "_XID": "row_208"
+            },
+            {
+                "output": "2.out",
+                "input": "2.in",
+                "score": 10,
+                "pid": 1547,
+                "index": 3,
+                "_XID": "row_209"
+            },
+            {
+                "output": "3.out",
+                "input": "3.in",
+                "score": 10,
+                "pid": 1547,
+                "index": 4,
+                "_XID": "row_210"
+            },
+            {
+                "output": "4.out",
+                "input": "4.in",
+                "score": 10,
+                "pid": 1547,
+                "index": 5,
+                "_XID": "row_211"
+            },
+            {
+                "output": "5.out",
+                "input": "5.in",
+                "score": 10,
+                "pid": 1547,
+                "index": 6,
+                "_XID": "row_212"
+            },
+            {
+                "output": "6.out",
+                "input": "6.in",
+                "score": 10,
+                "pid": 1547,
+                "index": 7,
+                "_XID": "row_213"
+            },
+            {
+                "output": "7.out",
+                "input": "7.in",
+                "score": 10,
+                "pid": 1547,
+                "index": 8,
+                "_XID": "row_214"
+            },
+            {
+                "output": "8.out",
+                "input": "8.in",
+                "score": 10,
+                "pid": 1547,
+                "index": 9,
+                "_XID": "row_215"
+            },
+            {
+                "output": "9.out",
+                "input": "9.in",
+                "score": 10,
+                "pid": 1547,
+                "index": 10,
+                "_XID": "row_216"
+            }
+        ]
+    },
+    "codeTemplates": [
+        {
+            "id": "tmpl_c",
+            "languageId": 1,
+            "name": "C",
+            "contentType": "text/x-csrc",
+            "description": "GCC 7.5.0",
+            "compileCommand": "/usr/bin/gcc -DONLINE_JUDGE -w -fmax-errors=3 -std=c11 {src_path} -lm -o {exe_path}",
+            "template": "#include <stdio.h>\nint main() {\n    int a,b;\n    scanf(\"%d %d\",&a,&b);\n    printf(\"%d\",a+b);\n    return 0;\n}",
+            "codeTemplate": "//PREPEND BEGIN\n#include <stdio.h>\n//PREPEND END\n\n//TEMPLATE BEGIN\nint add(int a, int b) {\n  // Please fill this blank\n  return ___________;\n}\n//TEMPLATE END\n\n//APPEND BEGIN\nint main() {\n  printf(\"%d\", add(1, 2));\n  return 0;\n}\n//APPEND END",
+            "isSpj": true,
+            "oj": "ME",
+            "seq": 0
+        },
+        {
+            "id": "tmpl_c_o2",
+            "languageId": 2,
+            "name": "C With O2",
+            "contentType": "text/x-csrc",
+            "description": "GCC 7.5.0",
+            "compileCommand": "/usr/bin/gcc -DONLINE_JUDGE -O2 -w -fmax-errors=3 -std=c11 {src_path} -lm -o {exe_path}",
+            "template": "#include <stdio.h>\nint main() {\n    int a,b;\n    scanf(\"%d %d\",&a,&b);\n    printf(\"%d\",a+b);\n    return 0;\n}",
+            "codeTemplate": "//PREPEND BEGIN\n#include <stdio.h>\n//PREPEND END\n\n//TEMPLATE BEGIN\nint add(int a, int b) {\n  // Please fill this blank\n  return ___________;\n}\n//TEMPLATE END\n\n//APPEND BEGIN\nint main() {\n  printf(\"%d\", add(1, 2));\n  return 0;\n}\n//APPEND END",
+            "isSpj": false,
+            "oj": "ME",
+            "seq": 0
+        },
+        {
+            "id": "tmpl_cpp",
+            "languageId": 3,
+            "name": "C++",
+            "contentType": "text/x-c++src",
+            "description": "G++ 7.5.0",
+            "compileCommand": "/usr/bin/g++ -DONLINE_JUDGE -w -fmax-errors=3 -std=c++14 {src_path} -lm -o {exe_path}",
+            "template": "#include<iostream>\nusing namespace std;\nint main()\n{\n    int a,b;\n    cin >> a >> b;\n    cout << a + b;\n    return 0;\n}",
+            "codeTemplate": "//PREPEND BEGIN\n#include <iostream>\nusing namespace std;\n//PREPEND END\n\n//TEMPLATE BEGIN\nint add(int a, int b) {\n  // Please fill this blank\n  return ___________;\n}\n//TEMPLATE END\n\n//APPEND BEGIN\nint main() {\n  cout << add(1, 2);\n  return 0;\n}\n//APPEND END",
+            "isSpj": true,
+            "oj": "ME",
+            "seq": 0
+        },
+        {
+            "id": "tmpl_cpp_o2",
+            "languageId": 4,
+            "name": "C++ With O2",
+            "contentType": "text/x-c++src",
+            "description": "G++ 7.5.0",
+            "compileCommand": "/usr/bin/g++ -DONLINE_JUDGE -O2 -w -fmax-errors=3 -std=c++14 {src_path} -lm -o {exe_path}",
+            "template": "#include<iostream>\nusing namespace std;\nint main()\n{\n    int a,b;\n    cin >> a >> b;\n    cout << a + b;\n    return 0;\n}",
+            "codeTemplate": "//PREPEND BEGIN\n#include <iostream>\nusing namespace std;\n//PREPEND END\n\n//TEMPLATE BEGIN\nint add(int a, int b) {\n  // Please fill this blank\n  return ___________;\n}\n//TEMPLATE END\n\n//APPEND BEGIN\nint main() {\n  cout << add(1, 2);\n  return 0;\n}\n//APPEND END",
+            "isSpj": false,
+            "oj": "ME",
+            "seq": 0
+        },
+        {
+            "id": "tmpl_py3",
+            "languageId": 6,
+            "name": "Python3",
+            "contentType": "text/x-python",
+            "description": "Python 3.7.5",
+            "compileCommand": "/usr/bin/python3 -m py_compile {src_path}",
+            "template": "a, b = map(int, input().split())\nprint(a + b)",
+            "codeTemplate": "//PREPEND BEGIN\n//PREPEND END\n\n//TEMPLATE BEGIN\ndef add(a, b):\n    return a + b\n//TEMPLATE END\n\n\nif __name__ == '__main__':  \n    //APPEND BEGIN\n    a, b = 1, 1\n    print(add(a, b))\n    //APPEND END",
+            "isSpj": false,
+            "oj": "ME",
+            "seq": 0
+        }
+    ],
+    "tags": [],
+    "languages": [
+        {
+            "id": 1,
+            "contentType": "text/x-csrc",
+            "description": "GCC 7.5.0",
+            "name": "C",
+            "compileCommand": "/usr/bin/gcc -DONLINE_JUDGE -w -fmax-errors=3 -std=c11 {src_path} -lm -o {exe_path}",
+            "template": "#include <stdio.h>\nint main() {\n    int a,b;\n    scanf(\"%d %d\",&a,&b);\n    printf(\"%d\",a+b);\n    return 0;\n}",
+            "codeTemplate": "//PREPEND BEGIN\n#include <stdio.h>\n//PREPEND END\n\n//TEMPLATE BEGIN\nint add(int a, int b) {\n  // Please fill this blank\n  return ___________;\n}\n//TEMPLATE END\n\n//APPEND BEGIN\nint main() {\n  printf(\"%d\", add(1, 2));\n  return 0;\n}\n//APPEND END",
+            "isSpj": true,
+            "oj": "ME",
+            "seq": 0,
+            "gmtCreate": "2020-12-12T15:11:44.000+0000",
+            "gmtModified": "2021-06-14T13:40:28.000+0000"
+        },
+        {
+            "id": 2,
+            "contentType": "text/x-csrc",
+            "description": "GCC 7.5.0",
+            "name": "C With O2",
+            "compileCommand": "/usr/bin/gcc -DONLINE_JUDGE -O2 -w -fmax-errors=3 -std=c11 {src_path} -lm -o {exe_path}",
+            "template": "#include <stdio.h>\nint main() {\n    int a,b;\n    scanf(\"%d %d\",&a,&b);\n    printf(\"%d\",a+b);\n    return 0;\n}",
+            "codeTemplate": "//PREPEND BEGIN\n#include <stdio.h>\n//PREPEND END\n\n//TEMPLATE BEGIN\nint add(int a, int b) {\n  // Please fill this blank\n  return ___________;\n}\n//TEMPLATE END\n\n//APPEND BEGIN\nint main() {\n  printf(\"%d\", add(1, 2));\n  return 0;\n}\n//APPEND END",
+            "isSpj": false,
+            "oj": "ME",
+            "seq": 0,
+            "gmtCreate": "2021-06-14T13:05:57.000+0000",
+            "gmtModified": "2021-06-14T13:20:08.000+0000"
+        },
+        {
+            "id": 3,
+            "contentType": "text/x-c++src",
+            "description": "G++ 7.5.0",
+            "name": "C++",
+            "compileCommand": "/usr/bin/g++ -DONLINE_JUDGE -w -fmax-errors=3 -std=c++14 {src_path} -lm -o {exe_path}",
+            "template": "#include<iostream>\nusing namespace std;\nint main()\n{\n    int a,b;\n    cin >> a >> b;\n    cout << a + b;\n    return 0;\n}",
+            "codeTemplate": "//PREPEND BEGIN\n#include <iostream>\nusing namespace std;\n//PREPEND END\n\n//TEMPLATE BEGIN\nint add(int a, int b) {\n  // Please fill this blank\n  return ___________;\n}\n//TEMPLATE END\n\n//APPEND BEGIN\nint main() {\n  cout << add(1, 2);\n  return 0;\n}\n//APPEND END",
+            "isSpj": true,
+            "oj": "ME",
+            "seq": 0,
+            "gmtCreate": "2020-12-12T15:12:44.000+0000",
+            "gmtModified": "2021-06-14T13:40:36.000+0000"
+        },
+        {
+            "id": 4,
+            "contentType": "text/x-c++src",
+            "description": "G++ 7.5.0",
+            "name": "C++ With O2",
+            "compileCommand": "/usr/bin/g++ -DONLINE_JUDGE -O2 -w -fmax-errors=3 -std=c++14 {src_path} -lm -o {exe_path}",
+            "template": "#include<iostream>\nusing namespace std;\nint main()\n{\n    int a,b;\n    cin >> a >> b;\n    cout << a + b;\n    return 0;\n}",
+            "codeTemplate": "//PREPEND BEGIN\n#include <iostream>\nusing namespace std;\n//PREPEND END\n\n//TEMPLATE BEGIN\nint add(int a, int b) {\n  // Please fill this blank\n  return ___________;\n}\n//TEMPLATE END\n\n//APPEND BEGIN\nint main() {\n  cout << add(1, 2);\n  return 0;\n}\n//APPEND END",
+            "isSpj": false,
+            "oj": "ME",
+            "seq": 0,
+            "gmtCreate": "2021-06-14T13:09:35.000+0000",
+            "gmtModified": "2021-06-14T13:20:19.000+0000"
+        },
+        {
+            "id": 6,
+            "contentType": "text/x-python",
+            "description": "Python 3.7.5",
+            "name": "Python3",
+            "compileCommand": "/usr/bin/python3 -m py_compile {src_path}",
+            "template": "a, b = map(int, input().split())\nprint(a + b)",
+            "codeTemplate": "//PREPEND BEGIN\n//PREPEND END\n\n//TEMPLATE BEGIN\ndef add(a, b):\n    return a + b\n//TEMPLATE END\n\n\nif __name__ == '__main__':  \n    //APPEND BEGIN\n    a, b = 1, 1\n    print(add(a, b))\n    //APPEND END",
+            "isSpj": false,
+            "oj": "ME",
+            "seq": 0,
+            "gmtCreate": "2020-12-12T15:14:23.000+0000",
+            "gmtModified": "2021-06-14T13:19:50.000+0000"
+        }
+    ],
+    "isUploadTestCase": true,
+    "uploadTestcaseDir": "/opt/judge/file/zip/be211d9eabac476abf6859163611527e",
+    "judgeMode": "default",
+    "samples": [
+        {
+            "output": "0.out",
+            "input": "0.in",
+            "score": 10,
+            "pid": 1547,
+            "index": 1,
+            "_XID": "row_207"
+        },
+        {
+            "output": "1.out",
+            "input": "1.in",
+            "score": 10,
+            "pid": 1547,
+            "index": 2,
+            "_XID": "row_208"
+        },
+        {
+            "output": "2.out",
+            "input": "2.in",
+            "score": 10,
+            "pid": 1547,
+            "index": 3,
+            "_XID": "row_209"
+        },
+        {
+            "output": "3.out",
+            "input": "3.in",
+            "score": 10,
+            "pid": 1547,
+            "index": 4,
+            "_XID": "row_210"
+        },
+        {
+            "output": "4.out",
+            "input": "4.in",
+            "score": 10,
+            "pid": 1547,
+            "index": 5,
+            "_XID": "row_211"
+        },
+        {
+            "output": "5.out",
+            "input": "5.in",
+            "score": 10,
+            "pid": 1547,
+            "index": 6,
+            "_XID": "row_212"
+        },
+        {
+            "output": "6.out",
+            "input": "6.in",
+            "score": 10,
+            "pid": 1547,
+            "index": 7,
+            "_XID": "row_213"
+        },
+        {
+            "output": "7.out",
+            "input": "7.in",
+            "score": 10,
+            "pid": 1547,
+            "index": 8,
+            "_XID": "row_214"
+        },
+        {
+            "output": "8.out",
+            "input": "8.in",
+            "score": 10,
+            "pid": 1547,
+            "index": 9,
+            "_XID": "row_215"
+        },
+        {
+            "output": "9.out",
+            "input": "9.in",
+            "score": 10,
+            "pid": 1547,
+            "index": 10,
+            "_XID": "row_216"
+        }
+    ],
+    "changeJudgeCaseMode": false
+}

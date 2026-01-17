@@ -1,0 +1,26 @@
+# Dependencies for OJ Batch Processing Tool
+PySide6==6.7.2
+PySide6-Fluent-Widgets>=1.6
+loguru>=0.7
+pydantic>=2.0
+requests>=2.28
+tenacity>=8.0
+beautifulsoup4>=4.11
+Pillow>=10.0
+google-generativeai>=0.3.0  # For Gemini LLM support (native SDK)
+openai>=1.0.0  # For OpenAI compatible APIs
+ddgs>=0.1.0  # For web search (formerly duckduckgo-search)
+pyyaml>=6.0  # For HydroOJ problem.yaml generation
+selenium>=4.0  # For HydroOJ Selenium login
+webdriver-manager>=4.0  # For auto-managing ChromeDriver
+
+# Web API相关 (v7.0新增)
+fastapi>=0.104.0  # FastAPI框架
+uvicorn[standard]>=0.24.0  # ASGI服务器
+pyjwt>=2.8.0  # JWT认证
+python-dotenv>=1.0.0  # 环境变量配置
+bcrypt>=4.0.0  # 密码加密
+python-multipart>=0.0.6  # 文件上传支持
+psutil>=5.9.0  # 系统资源监控
+aiosqlite>=0.19.0  # 异步SQLite
+cryptography>=41.0.0  # 敏感数据加密

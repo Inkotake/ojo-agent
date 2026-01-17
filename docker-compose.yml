@@ -1,0 +1,77 @@
+# OJO v9.0 Docker Compose 配置
+# 生产环境部署配置
+
+# version: '3.8'  # 已废弃，新版本 Docker Compose 不需要
+
+services:
+  ojo-api:
+    # 使用从镜像仓库拉取的镜像（生产环境）
+    image: ghcr.io/inkotake/ojo:latest
+    # 如果需要本地构建，取消注释下面，注释掉上面的 image
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    #   args:
+    #     BUILDKIT_INLINE_CACHE: 1
+    container_name: ojo-api
+    # 运行时资源限制
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+        reservations:
+          cpus: '1'
+          memory: 1G
+    restart: unless-stopped
+    ports:
+      - "${OJO_PORT:-8000}:8000"
+    environment:
+      - OJO_HOST=0.0.0.0
+      - OJO_PORT=8000
+      - OJO_DEBUG=${OJO_DEBUG:-false}
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY:-}
+      - OJO_ENCRYPTION_KEY=${OJO_ENCRYPTION_KEY:-}
+      - TZ=Asia/Shanghai
+    volumes:
+      - ojo-data:/app/data
+      - ojo-logs:/app/logs
+      - ojo-workspace:/app/workspace
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - ojo-network
+
+  # 可选: Nginx 反向代理
+  nginx:
+    image: nginx:alpine
+    container_name: ojo-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./config/ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - ojo-api
+    networks:
+      - ojo-network
+    profiles:
+      - with-nginx
+
+volumes:
+  ojo-data:
+    driver: local
+  ojo-logs:
+    driver: local
+  ojo-workspace:
+    driver: local
+
+networks:
+  ojo-network:
+    driver: bridge

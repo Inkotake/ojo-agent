@@ -1,0 +1,35 @@
+{
+  "_comment": "OJO v9.0 配置示例 - 复制此文件为 config.json 并修改",
+  
+  "oj_base_url": "https://oj.example.com",
+  "oj_username": "",
+  "oj_password": "",
+  "default_oj_adapter": "shsoj",
+  
+  "deepseek_api_key": "",
+  "deepseek_api_url": "https://api.deepseek.com/v1",
+  "deepseek_model": "deepseek-reasoner",
+  "deepseek_model_generation": "deepseek-reasoner",
+  "deepseek_model_solution": "deepseek-reasoner",
+  
+  "gemini_api_key": "",
+  "gemini_api_url": "https://generativelanguage.googleapis.com/v1beta",
+  "gemini_model": "gemini-2.0-flash-exp",
+  
+  "llm_provider_ocr": "siliconflow",
+  "llm_provider_generation": "deepseek",
+  "llm_provider_solution": "deepseek",
+  
+  "llm_max_concurrency": 4,
+  "oj_max_concurrency": 2,
+  "request_timeout_minutes": 10,
+  
+  "temperature_generation": 0.7,
+  "temperature_solution": 0.7,
+  
+  "proxy_enabled": false,
+  "http_proxy": "",
+  "verify_ssl": true,
+  
+  "log_level": "INFO"
+}

@@ -1,0 +1,35 @@
+# Production API Dependencies (精简版，不包含 GUI 和浏览器自动化)
+# 用于 Docker 镜像构建，减少镜像大小
+
+# 核心依赖
+loguru>=0.7
+pydantic>=2.0
+requests>=2.28
+tenacity>=8.0
+beautifulsoup4>=4.11
+Pillow>=10.0
+
+# LLM 支持（已移除 Gemini，只保留 OpenAI 兼容）
+openai>=1.0.0  # For OpenAI compatible APIs
+
+# 搜索功能（已禁用，但保留依赖以防将来需要）
+ddgs>=0.1.0  # For web search (formerly duckduckgo-search)
+
+# 配置文件支持
+pyyaml>=6.0  # For HydroOJ problem.yaml generation
+
+# Web API相关
+fastapi>=0.104.0  # FastAPI框架
+uvicorn[standard]>=0.24.0  # ASGI服务器
+pyjwt>=2.8.0  # JWT认证
+python-dotenv>=1.0.0  # 环境变量配置
+bcrypt>=4.0.0  # 密码加密
+python-multipart>=0.0.6  # 文件上传支持
+psutil>=5.9.0  # 系统资源监控
+aiosqlite>=0.19.0  # 异步SQLite
+cryptography>=41.0.0  # 敏感数据加密
+
+# 注意：以下包已移除（生产环境不需要）：
+# - PySide6, PySide6-Fluent-Widgets (GUI，仅开发环境需要)
+# - selenium, webdriver-manager (浏览器自动化，仅 HydroOJ 登录需要，可通过其他方式实现)
+# - google-generativeai (Gemini 支持已移除)

@@ -1,0 +1,85 @@
+# OJO Project .gitignore
+
+# ============= 敏感配置文件 =============
+config.json
+.env
+
+# ============= 数据库文件 =============
+*.db
+*.db.backup
+*.db-journal
+*.db-wal
+*.db-shm
+
+# ============= Python =============
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+.venv/
+ENV/
+env/
+
+# ============= IDE =============
+.idea/
+.vscode/
+*.swp
+*.swo
+.cursor/
+
+# ============= 日志和临时文件 =============
+logs/
+*.log
+temp/
+*.tmp
+*.bak
+
+# ============= 工作区和输出 =============
+workspace/
+problem_log/
+finished.txt
+failed_problems.txt
+summary.csv
+summary.json
+
+# ============= 前端 =============
+frontend/node_modules/
+frontend/.vite/
+frontend/dist/  # 构建产物，不需要跟踪（在 Docker 中构建）
+
+# ============= 打包文件 =============
+*.zip
+
+# ============= 测试文件 =============
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# ============= macOS =============
+.DS_Store
+
+# ============= Windows =============
+Thumbs.db
+Desktop.ini
+
+# ============= 大型备份文件 =============
+finished.zip
+build_and_start.zip
